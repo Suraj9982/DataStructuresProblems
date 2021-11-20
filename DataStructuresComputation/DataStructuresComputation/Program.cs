@@ -30,7 +30,7 @@ namespace DataStructuresComputation
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice of option should be betweeen 1 to 3");
+                        Console.WriteLine("your choice should be between 1 to 3");
                         break;
                 }
             }   
