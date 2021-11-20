@@ -55,5 +55,31 @@ namespace DataStructuresComputation
                 temp = temp.next;
             }
         }
+        internal Node InsertAtPostion(int postion , int data)
+        {
+            Node Newestnode = new Node(data);
+            if (this.head == null)
+            {
+                return Newestnode;
+            }
+            if (postion == 0)
+            {
+                Newestnode.next = this.head;
+                this.head = Newestnode;
+                return this.head;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < postion)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            Newestnode.next = prev.next;
+            prev.next = Newestnode;
+            return this.head;
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace DataStructuresComputation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Exit");
+                Console.WriteLine("CHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Insert At Particular postion\n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -27,6 +27,12 @@ namespace DataStructuresComputation
                         linked.Display();
                         break;
                     case 3:
+                        linked.Adddata(56);
+                        linked.Adddata(70);
+                        linked.InsertAtPostion(1, 30);
+                        linked.Display();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                     default:
