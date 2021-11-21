@@ -11,7 +11,7 @@ namespace DataStructuresComputation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Insert At Particular postion\n4.Exit");
+                Console.WriteLine("CHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Insert At Particular postion\n4.Remove First Node\n5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -33,10 +33,14 @@ namespace DataStructuresComputation
                         linked.Display();
                         break;
                     case 4:
+                        linked.RemoveFirstnode();
+                        linked.Display();
+                        break;
+                    case 5:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 4");
+                        Console.WriteLine("your choice should be between 1 to 5");
                         break;
                 }
             }   
