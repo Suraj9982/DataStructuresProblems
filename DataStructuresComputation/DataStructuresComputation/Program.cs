@@ -7,11 +7,12 @@ namespace DataStructuresComputation
         static void Main(string[] args)
         {
             LinkedList linked = new LinkedList();
+            StackOperations stack = new StackOperations();
             Console.WriteLine("DATA STRUCTURES");
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nCHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Insert At Particular postion\n4.Remove First Node\n5.RemoveLastNode\n6.Exit");
+                Console.WriteLine("\nCHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Insert At Particular postion\n4.Remove First Node\n5.RemoveLastNode\n6.Push into Stack\n7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -41,10 +42,15 @@ namespace DataStructuresComputation
                         linked.Display();
                         break;
                     case 6:
+                        stack.Push(70);
+                        stack.Push(30);
+                        stack.Push(56);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 6");
+                        Console.WriteLine("your choice should be between 1 to 7");
                         break;
                 }
             }   
