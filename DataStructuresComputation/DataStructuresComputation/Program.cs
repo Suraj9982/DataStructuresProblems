@@ -12,7 +12,7 @@ namespace DataStructuresComputation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nCHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Insert At Particular postion\n4.Remove First Node\n5.RemoveLastNode\n6.Push into Stack\n7.Exit");
+                Console.WriteLine("\nCHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Insert At Particular postion\n4.Remove First Node\n5.RemoveLastNode\n6.Push into Stack\n7.Peek into Stack\n8.Pop from stack\n9.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -45,12 +45,20 @@ namespace DataStructuresComputation
                         stack.Push(70);
                         stack.Push(30);
                         stack.Push(56);
+                        stack.Peek();
                         break;
                     case 7:
+                        stack.Peek();
+                        break;
+                    case 8:
+                        stack.Pop();
+                        stack.Peek();
+                        break;
+                    case 9:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 7");
+                        Console.WriteLine("your choice should be between 1 to 9");
                         break;
                 }
             }   

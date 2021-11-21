@@ -27,6 +27,25 @@ namespace DataStructuresComputation
             top = newnode;
             Console.WriteLine("{0} item pushed to stack ", newnode.data);
         }
+        internal void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("stack is in undefllow condition");
+                return;
+            }
+            Console.WriteLine("{0} item pooped out from stack", top.data);
+            top = top.next;
+        }
+        internal void Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("stack is in undefllow condition");
+                return;
+            }
+            Console.WriteLine("{0},is on the top of the stack", this.top.data);
+        }
     }
     
 }
