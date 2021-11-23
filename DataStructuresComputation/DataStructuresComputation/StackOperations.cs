@@ -46,6 +46,19 @@ namespace DataStructuresComputation
             }
             Console.WriteLine("{0},is on the top of the stack", this.top.data);
         }
-    }
-    
+        internal void Display()
+        {
+            Node temp = this.top;
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+            }
+        }
+        internal void PeekAndPop()
+        {
+            Peek();
+            Pop();
+        }
+    }   
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructuresComputation
 {
-    class QueueOperation
+    internal class QueueOperation
     {
         Node front;
         Node rear;
