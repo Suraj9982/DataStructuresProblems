@@ -108,6 +108,7 @@ namespace DataStructuresComputation
             newnode.next = null;
             return null;
         }
+<<<<<<< HEAD
         internal int Search(int value)
         {
             Node node = this.head;
@@ -123,5 +124,8 @@ namespace DataStructuresComputation
             }
             return count;
         }
+=======
+
+>>>>>>> b88a5b9841fce7225409707476de565d6b9cb361
     }
 }
