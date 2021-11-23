@@ -12,7 +12,7 @@ namespace DataStructuresComputation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nCHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Insert At Particular postion\n4.Remove First Node\n5.RemoveLastNode\n6.Search the data\n7.Push into Stack\n8.Peek into Stack\n9.Pop from stack\n10.Exit");
+                Console.WriteLine("\nCHOOSE OPTION\n1.Add simple linkedlist\n2.Add In Reverse\n3.Insert At Particular postion\n4.Remove First Node\n5.RemoveLastNode\n6.Search the data\n7.search and insert new data on postion\n8.Push into stack\n9.Peek into Stack\n10.Pop from stack\n11.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -48,24 +48,29 @@ namespace DataStructuresComputation
                         Console.WriteLine(search);
                         break;
                     case 7:
+                        int postion = linked.Search(30);
+                        linked.InsertAtPostion(postion, 40);
+                        linked.Display();
+                        break;
+                    case 8:
                         stack.Push(70);
                         stack.Push(30);
                         stack.Push(56);
                         stack.Peek();
                         break;
-                    case 8:
+                    case 9:
                         stack.Peek();
                         stack.Display();
                         break;
-                    case 9:
+                    case 10:
                         stack.PeekAndPop();
                         stack.Display();
                         break;
-                    case 10:
+                    case 11:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 10");
+                        Console.WriteLine("your choice should be between 1 to 11");
                         break;
                 }
             }   
